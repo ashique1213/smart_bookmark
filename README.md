@@ -52,7 +52,7 @@ src/
 
 ---
 
-## 🔐 Database Schema
+## Database Schema
 
 ```sql
 create table bookmarks (
@@ -64,7 +64,7 @@ create table bookmarks (
 );
 ````
 
-## ⚙️ Environment Variables
+## Environment Variables
 
 Create a `.env.local` file:
 
