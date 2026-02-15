@@ -84,7 +84,10 @@ const deleteBookmark = async (id) => {
     };
   }, [user]);
 
- 
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    router.push("/login");
+  };
 
   if (!user) return null;
 
@@ -96,7 +99,10 @@ const deleteBookmark = async (id) => {
           <h1 className="text-2xl font-bold">
             Welcome {user.email}
           </h1>
-         
+          <button onClick={handleLogout}
+            className="bg-red-500 text-white px-4 py-2 rounded-lg">
+            Logout
+          </button>
         </div>
 
         <div className="flex gap-3">
